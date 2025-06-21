@@ -2,15 +2,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Statik dosyaları sunmak için public klasörünü kullan
+// Statik dosyaları (HTML, CSS, JS) sunmak için 'public' klasörünü kullan
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
-
-// Ana sayfa için index.html dosyasını gönder
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 const items = {
     hot: {
