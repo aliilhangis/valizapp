@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valiz Listesi Oluşturucu</title>
+    <title>Akıllı Valiz Asistanı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Valiz Listesi Oluşturucu</h1>
+        <h1>Akıllı Valiz Asistanı</h1>
+        <p class="subtitle">Seyahatiniz için mükemmel valizi saniyeler içinde hazırlayın.</p>
         <form id="suitcase-form">
             <div class="form-group">
                 <label for="climate">İklim Seçin:</label>
@@ -24,8 +28,8 @@
             </div>
             <button type="submit">Liste Oluştur</button>
         </form>
-        <div id="result">
-            <h2>Valizinizde Olması Gerekenler:</h2>
+        <div id="result" class="hidden">
+            <h2>İşte Valiz Listeniz:</h2>
             <ul id="suitcase-list"></ul>
         </div>
     </div>
