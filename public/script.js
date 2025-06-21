@@ -7,7 +7,7 @@ document.getElementById('suitcase-form').addEventListener('submit', async functi
     const resultDiv = document.getElementById('result');
 
     listElement.innerHTML = '<li>Liste oluşturuluyor...</li>';
-    resultDiv.style.display = 'block';
+    resultDiv.classList.remove('hidden');
 
     try {
         const response = await fetch('/generate', {
@@ -38,5 +38,6 @@ document.getElementById('suitcase-form').addEventListener('submit', async functi
 
     } catch (error) {
         listElement.innerHTML = `<li>Hata: ${error.message}</li>`;
+        resultDiv.classList.remove('hidden');
     }
 }); 
