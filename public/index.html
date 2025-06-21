@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valiz Listesi Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Valiz Listesi Oluşturucu</h1>
+        <form id="suitcase-form">
+            <div class="form-group">
+                <label for="climate">İklim Seçin:</label>
+                <select id="climate" name="climate" required>
+                    <option value="hot">Sıcak</option>
+                    <option value="cold">Soğuk</option>
+                    <option value="temperate">Ilıman</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="days">Seyahat Süresi (gün):</label>
+                <input type="number" id="days" name="days" min="1" required>
+            </div>
+            <button type="submit">Liste Oluştur</button>
+        </form>
+        <div id="result">
+            <h2>Valizinizde Olması Gerekenler:</h2>
+            <ul id="suitcase-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
